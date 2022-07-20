@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --font-fraunces: 'Fraunces', serif;
+    --font-montserrat: 'Montserrat', sans-serif;
+
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Dark-cyan-a: hsl(159, 37%, 24%);
+
+    --Cream: hsl(30, 38%, 92%);
+
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    --new-box-shadow: 0 25px 15px 0 rgba(0, 0, 0, 0.01), 0 10px 25px 0 rgba(0, 0, 0, 0.1);
+
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--Cream);
+}
+
+.container {
+    /* padding: 1em; */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product_item {
+    /* width: 550px; */
+    max-height: 400px;
+    background-color: var(--White);
+    box-shadow: var(--new-box-shadow);
+    border-radius: 0.6rem;
+    display: flex;
+}
+
+img {
+    border-radius: 0.6rem 0 0 0.6rem;
+    height: 400px;
+    object-fit: cover;
+}
+.img_m{
+    display: none;
+}
+.text_s {
+    padding: 2rem;
+    width: 290px;
+}
+
+.text_s h1 {
+    font-family: var(--font-montserrat);
+    font-weight: 300;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: var(--Dark-grayish-blue);
+
+}
+
+.text_s h2 {
+    font-family: var(--font-fraunces);
+    margin: 1.2rem 0;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    color: var(--Very-dark-blue);
+    max-width: 190px;
+}
+
+.text_s p {
+    font-family: var(--font-montserrat);
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    max-width: 210px;
+    color: var(--Dark-grayish-blue);
+}
+
+.text_s .price {
+    display: flex;
+    padding: 2.1rem 0;
+    gap: 1.1rem;
+}
+
+.text_s .price p {
+    font-family: var(--font-fraunces);
+    font-size: 2rem;
+    color: var(--Dark-cyan);
+
+}
+
+.text_s .price span {
+    font-family: var(--font-montserrat);
+    font-size: 0.8rem;
+    text-decoration: line-through;
+    color: var(--Dark-grayish-blue);
+}
+
+.text_s .btn_cart {
+    width: 200px;
+
+}
+
+.icon_cart img {
+    width: 50px;
+    height: 50px;
+    padding: 1rem;
+    object-fit: cover;
+}
+
+.text_s .btn_cart button {
+    display: flex;
+    /* gap: 0.5rem; */
+    width: 230px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Dark-cyan);
+    border: none;
+    border-radius: 0.5rem;
+    font-family: var(--font-montserrat);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.text_s .btn_cart button:hover {
+    background-color: var(--Dark-cyan-a);
+
+}
+
+.text_s .btn_cart button p {
+    color: var(--White);
+    font-weight: 700;
+    position: relative;
+    left: -0.5rem;
+    /* padding: 1.1rem; */
+}
+
+@media (max-width:800px) {
+    .container{
+        display: none;
+    }
+    .con_mob{
+        max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .pro_mob{
+        flex-direction: column;
+        max-height: 700px;
+        width: 380px;
+        align-items: center;
+    }
+    .img_s{
+        display: none;
+    }
+    .img_m{
+        display: block;
+    }
+    .img_m img{
+        border-radius: 0.7rem 0.7rem 0 0;
+            max-width: 380px;
+            height: 300px;
+    object-fit: cover;
+    }
+
+    .text_s {
+    padding: 1rem;
+    width: 350px;
+}
+
+.text_s h1 {
+    font-family: var(--font-montserrat);
+    font-weight: 300;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: var(--Dark-grayish-blue);
+
+}
+
+
+    .text_s h2 {
+    font-family: var(--font-fraunces);
+    margin: 1rem 0;
+    font-size: 2rem;
+    line-height: 1.9rem;
+    color: var(--Very-dark-blue);
+    max-width: 300px;
+}
+.text_s p {
+    font-family: var(--font-montserrat);
+    font-size: 1rem;
+    line-height: 1.4rem;
+    max-width: 310px;
+    color: var(--Dark-grayish-blue);
+}
+
+.text_s .btn_cart button {
+    width: 320px;
+}
+.text_s .price p{
+    font-size: 2.2rem;
+}
+.text_s .price span{
+    font-size: 1rem;
+}
+}
