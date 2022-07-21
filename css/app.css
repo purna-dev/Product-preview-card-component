@@ -216,3 +216,13 @@ img {
     font-size: 1rem;
 }
 }
+
+@media (max-width:380px) {
+    .pro_mob{
+        max-width: 350px;
+        margin: 1rem;
+    }
+    .img_m img{
+        max-width: 350px;
+    }
+}
